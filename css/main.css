@@ -86,4 +86,8 @@ a:active {
 :root {
   --background-color: rgba(0, 0, 0, 0.9);
   --text-color: rgba(255, 255, 255, 0.7);
+}
+
+.grid {
+  display: grid;
 }/*# sourceMappingURL=main.css.map */
