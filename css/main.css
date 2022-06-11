@@ -63,6 +63,8 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  display: flex;
+  justify-content: center;
 }
 
 h1,
@@ -71,6 +73,7 @@ h3 {
   font-weight: 700;
   line-height: 1.1;
   margin-top: 0;
+  color: white;
 }
 
 p {
@@ -86,8 +89,29 @@ a:active {
 :root {
   --background-color: rgba(0, 0, 0, 0.9);
   --text-color: rgba(255, 255, 255, 0.7);
+  --main-bg-color: rgb(34, 74, 167);
+  --sidebar-bg-color: rgb(73, 34, 171);
 }
 
 .grid {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  width: min(100% - 40px, 1000px);
+}
+.grid__main {
+  background-color: var(--main-bg-color);
+}
+.grid__sidebar {
+  background-color: var(--sidebar-bg-color);
+}
+.grid__main, .grid__sidebar {
+  padding: 20px;
+}
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
 }/*# sourceMappingURL=main.css.map */
