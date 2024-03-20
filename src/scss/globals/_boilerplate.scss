@@ -1,0 +1,19 @@
+html {
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+// $medium: calc(20rem / 16); // 20px
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: rgb(51, 47, 47);
+  font-family: Arial, Helvetica, sans-serif;
+}
