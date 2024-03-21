@@ -1,7 +1,10 @@
+@use "../utils";
+
 html {
   font-size: 100%;
 }
 
+// resets
 *,
 *::after,
 *::before {
@@ -13,7 +16,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: white;
-  background-color: rgb(51, 47, 47);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  // font-family: Arial, Helvetica, sans-serif;
+  font-family: utils.$font-family;
 }
