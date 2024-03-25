@@ -1,0 +1,14 @@
+@use "sass:math";
+
+// font-size: rem(20);
+
+@function rem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 16) + rem;
+  } @else {
+    @error "Argument has to be unitless";
+  }
+}
+
+@debug rem(16px);
+@debug rem(16px);
