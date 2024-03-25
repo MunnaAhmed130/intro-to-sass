@@ -1,13 +1,19 @@
+@use "../utils";
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   // grid-template-rows: auto auto;
   gap: calc(40rem / 16);
+  // max-width: 1000px;
+  width: min(100% - 40px, 1000px);
+  margin-inline: auto;
 
-  // min-width >= 900px
-  // max-width <= 900px
-  @media (min-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
+  // min-width >= 900px, mobile first approach
+  // max-width <= 900px, desktop first approach
+
+  @include utils.breakpoint(large) {
+    grid-template-columns: 2fr 1fr;
   }
 
   &__main,
@@ -17,8 +23,24 @@
 
   &__main {
     background-color: #0932a3;
+
+    @include utils.breakpoint(medium) {
+      background-color: rgb(31, 116, 31);
+    }
+
+    @include utils.breakpoint(large) {
+      background-color: orange;
+    }
   }
   &__sidebar {
     background-color: #8909a3;
+
+    @include utils.breakpoint-down(medium) {
+      text-align: center;
+    }
+
+    @include utils.breakpoint-down(small) {
+      text-align: right;
+    }
   }
 }
