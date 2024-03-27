@@ -5,8 +5,12 @@
   grid-template-columns: 1fr;
   // grid-template-rows: auto auto;
   gap: calc(40rem / 16);
+
   // max-width: 1000px;
-  width: min(100% - 40px, 1000px);
+  // width: min(100% - 40px, 1000px);
+  // width: min(100% - 40px, calc(1000rem / 16));
+  width: min(100% - 40px, utils.rem(1000));
+
   margin-inline: auto;
 
   // min-width >= 900px, mobile first approach

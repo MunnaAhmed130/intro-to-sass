@@ -3,12 +3,20 @@
 // font-size: rem(20);
 
 @function rem($px) {
+  // return rem value for unitless pixel value
   @if math.is-unitless($px) {
+    // @return calc($px / 16 * 1rem);
     @return math.div($px, 16) + rem;
   } @else {
     @error "Argument has to be unitless";
   }
 }
 
-@debug rem(16px);
-@debug rem(16px);
+// rem's arg with px unit throws error
+// @debug rem(16px);
+
+//
+// @debug rem(16);
+
+// $px: 16;
+// @debug calc($px / 16 * 1rem);
