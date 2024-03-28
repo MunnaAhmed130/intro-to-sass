@@ -1,5 +1,10 @@
 @use "../utils";
 
+%widget {
+  border: 1px solid transparent;
+  padding: 1rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -36,8 +41,9 @@
       background-color: orange;
     }
   }
+
   &__sidebar {
-    background-color: #8909a3;
+    // background-color: #8909a3;
 
     @include utils.breakpoint-down(medium) {
       text-align: center;
@@ -46,5 +52,19 @@
     @include utils.breakpoint-down(small) {
       text-align: right;
     }
+  }
+
+  &__widget {
+    // $widget: &;
+    // @debug #{$widget};
+    @extend %widget;
+
+    // &--magenta {
+    //   background-color: #8909a3;
+    // }
+
+    // &--green {
+    //   background-color: rgb(0, 148, 0);
+    // }
   }
 }
